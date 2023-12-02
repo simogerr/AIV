@@ -1,9 +1,16 @@
 
 # AIV Game Programming - Academy Repository
 
-Welcome to the AIV Academy repository, here you will find a collection of exercises, projects, and resources related to AIV Academy third year course.
+###  Welcome to the AIV Academy repository, here you will find a collection of exercises, projects, and resources related to AIV Academy third year course.
+
+|    III      | 
+| --------    | 
+| 2023 - 2024  | 
+
+[AIV Accademia Italiana Videogiochi](https://www.aiv01.it/corsi/programmazione/)
 
 ## Repository Structure
+
 
 The repository is organized to make navigation and usage as straightforward as possible.
 
@@ -13,6 +20,7 @@ The repository is organized to make navigation and usage as straightforward as p
 
 - **Resources**: The `resources/` folder contains documentation, guides, and other materials useful for learning.
 
+---
 ## Contact
 
 For additional information or questions: simonegerosa.design@gmail.com
