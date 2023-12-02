@@ -3,7 +3,7 @@
 
 ### Welcome to the AIV Academy repository, here you will find a collection of exercises, projects, and resources related to AIV Academy third year course.
 [AIV Accademia Italiana Videogiochi - Site](https://www.aiv01.it/corsi/programmazione/)
-| III Year    | 
+|    III      | 
 | --------    | 
 | 2023 -2024  | 
 ## Repository Structure
