@@ -1,0 +1,32 @@
+[COAS E' IL KERNEL?]
+Il "kernel" è una parte fondamentale di un sistema operativo (SO) ed è responsabile della gestione delle risorse del sistema e delle interazioni di base con l'hardware. In termini semplici, il kernel funge da intermediario tra il software e l'hardware, garantendo che i programmi possano accedere alle risorse del sistema in modo sicuro ed efficiente.
+
+Dal punto di vista fisico, il kernel è un programma software che risiede direttamente nella memoria del computer. Può essere caricato in memoria quando il sistema operativo viene avviato e rimane in esecuzione durante tutto il tempo di utilizzo del computer. Il kernel opera a livello di privilegio più elevato rispetto alle applicazioni utente, il che gli consente di accedere direttamente all'hardware e alle risorse di sistema.
+
+Le principali funzioni del kernel includono:
+
+1. **Gestione della memoria:** Il kernel assegna e dealloca spazio di memoria per i programmi in esecuzione e si occupa della gestione della memoria virtuale.
+
+2. **Gestione dei processi:** Il kernel gestisce l'esecuzione dei processi, consentendo loro di condividere la CPU in modo equo e garantendo che i processi possano essere eseguiti in modo sicuro e isolato l'uno dall'altro.
+
+3. **Gestione dei dispositivi:** Il kernel facilita la comunicazione tra il software e l'hardware, permettendo ai programmi di interagire con i dispositivi come dischi rigidi, stampanti e periferiche di rete.
+
+4. **Gestione del sistema di file:** Il kernel gestisce le operazioni di lettura e scrittura sui file, garantendo che le informazioni siano memorizzate e recuperate correttamente.
+
+La distinzione tra il kernel e il sistema operativo in generale può sembrare sfumata a volte, poiché il termine "sistema operativo" può essere usato in modo più ampio per includere sia il kernel che altri componenti come il file system, il sistema di input/output e l'interfaccia utente. Tuttavia, il kernel è il nucleo essenziale che gestisce le funzioni di base del sistema operativo e fornisce una base per il funzionamento di tutti gli altri componenti del sistema.
+
+
+[PRIVILEGI DEL KERNERL, COME FUNZIONA?]
+Il kernel ottiene i suoi privilegi a livello di circuiti attraverso una combinazione di hardware e software. Nelle architetture dei processori moderni, i privilegi di esecuzione vengono spesso implementati attraverso il concetto di "modalità" o "livelli di privilegio". Ciò consente al sistema operativo di eseguire codice con privilegi più elevati rispetto alle applicazioni utente.
+
+Ecco come funziona generalmente:
+
+1. **Livelli di Privilegio:** I processori moderni spesso implementano almeno due livelli di privilegio: il livello utente (User Mode) e il livello kernel (Kernel Mode). Il codice eseguito a livello utente ha accesso solo a un sottoinsieme delle istruzioni del processore e non può eseguire operazioni che potrebbero compromettere la stabilità del sistema. D'altra parte, il codice eseguito a livello kernel ha accesso completo alle risorse hardware e alle istruzioni del processore.
+
+2. **Switch di Modalità:** Quando il sistema operativo viene avviato, il kernel viene caricato in memoria e viene eseguito in modalità kernel. Quando un'applicazione utente deve eseguire un'operazione che richiede privilegi elevati (ad esempio, accedere a una risorsa hardware), viene richiesto il passaggio temporaneo alla modalità kernel. Questo passaggio è noto come "switch di modalità" o "trap".
+
+3. **Interrupt e Eccezioni:** I processori gestiscono eventi speciali chiamati interrupt o eccezioni. Un interrupt può essere generato da un dispositivo hardware (come un timer o una periferica di input/output) o da un'istruzione specifica nel codice. Quando si verifica un interrupt, il processore può passare automaticamente alla modalità kernel per gestire l'evento. Questo permette al kernel di interagire direttamente con l'hardware.
+
+4. **Controllo dell'Accesso alle Risorse:** Il kernel, in modalità kernel, controlla l'accesso alle risorse del sistema e può eseguire istruzioni che sarebbero vietate in modalità utente. Ciò include l'accesso diretto alla memoria fisica, la gestione dei processi e la comunicazione con i dispositivi hardware.
+
+In sintesi, il kernel ottiene i suoi privilegi a livello di circuiti attraverso la progettazione del processore e l'implementazione di meccanismi di protezione che permettono al sistema operativo di controllare l'accesso alle risorse del sistema. Questa separazione tra modalità utente e kernel è essenziale per garantire la sicurezza e la stabilità del sistema operativo.
