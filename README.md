@@ -15,6 +15,6 @@ The repository is organized to make navigation and usage as straightforward as p
 
 ## Contact
 
-For additional information or questions, contact us at the email address: simonegerosa.design@gmail.com
+For additional information or questions: simonegerosa.design@gmail.com
 
 
