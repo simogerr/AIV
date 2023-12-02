@@ -1,7 +1,7 @@
 
 # AIV Game Programming - Academy Repository
 
-### <span style="color: gray;">Welcome to the AIV Academy repository, here you will find a collection of exercises, projects, and resources related to AIV Academy third year course.</span>
+<span style="color: gray;"> Welcome to the AIV Academy repository, here you will find a collection of exercises, projects, and resources related to AIV Academy third year course.</span>
 | Header 1 | Header 2 |
 | -------- | -------- |
 | Cella 1  | Cella 2  |
