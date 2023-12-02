@@ -5,7 +5,7 @@
 [AIV Accademia Italiana Videogiochi](https://www.aiv01.it/corsi/programmazione/)
 |    III      | 
 | --------    | 
-| 2023 -2024  | 
+| 2023 - 2024  | 
 ## Repository Structure
 
 
