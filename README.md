@@ -1,7 +1,7 @@
 
 # AIV Game Programming - Academy Repository
 
-Welcome to the AIV Academy repository, here you will find a collection of exercises, projects, and resources related to AIV Academy third year course.
+##Welcome to the AIV Academy repository, here you will find a collection of exercises, projects, and resources related to AIV Academy third year course.
 
 ## Repository Structure
 
