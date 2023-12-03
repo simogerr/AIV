@@ -1,6 +1,5 @@
 
 # AIV Game Programming - Academy Repository
-![Text](https://github.com/simogerr/AIV/blob/main/resources/AIV-logo.png)
 ###  Welcome to the AIV Academy repository, here you will find a collection of exercises, projects, and resources related to AIV Academy third year course.
 
 |    III      | 
