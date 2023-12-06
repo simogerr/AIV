@@ -3,7 +3,6 @@ bits 64
 extern MessageBeep
 extern MessageBoxA
 extern ExitProcess
-
 extern InitWindow
 extern BeginDrawing
 extern ClearBackground
@@ -15,10 +14,8 @@ extern EndDrawing
 extern IsKeyDown
 extern DrawLine
 
-
 start:
   sub rsp,8
-
   sub rsp, 32
   mov rcx, 30
   call [MessageBeep]
@@ -30,11 +27,9 @@ start:
   mov r8, gameTitle  
   call [InitWindow]
 
-
   mov rcx, 60
   call [SetTargetFPS]
   add rsp, 32
-
 
 gameloop:
   sub rsp, 32
@@ -48,7 +43,6 @@ gameloop:
   call [BeginDrawing]
   mov rcx, 0xFFFFF110
   call [ClearBackground]
-
 
   ;Draw Text
   mov rcx, boxTitle
@@ -97,11 +91,8 @@ gameloop:
   add rsp, 8
   pop rax
 
-
-
   ; INPUT 
   ; IsKeyDown(int key)
-
   xor rax, rax ; zeroing rax
   mov rcx, 68 ; Right
   sub rsp, 32
@@ -137,7 +128,6 @@ gameloop:
   add [squarey], rax 
   add [squarey], rax 
   add [squarey], rax 
-  
 
   ;shooting
   xor rax, rax ; zeroing rax
@@ -150,7 +140,6 @@ gameloop:
   add rsp, 32
   
 aftershoot:
-
   ;aftershoot
 
   mov rcx, [enemyx]
@@ -165,9 +154,6 @@ aftershoot:
   add rsp, 32
   inc dword [enemyy]
  
-
-
-
 no_input:
   ;void DrawRectangle(int posX, int posY, int width, int height, Color color);  
   ;Player
@@ -186,7 +172,6 @@ no_input:
   jge reset_playerx
   cmp dword [squarey], 728
   jge reset_playery
-
 
   ;Projectile
 
@@ -252,15 +237,12 @@ no_input:
   cmp dword [enemy4y], 768
   jge reset_enemy4
 
-
   add rsp, 8
   pop rax
   call [EndDrawing]
   add rsp, 32
 
-
   jmp gameloop
-
 
 ;Functions
 shoot:
@@ -299,16 +281,11 @@ reset_playery:
   mov dword [squarey], 0
   jmp no_input
 
-
-
-
-
 ;END PROGRAM
   end:
   sub rsp, 32
   call [ExitProcess]
   add rsp, 32
-
   ret
 
 section .data
