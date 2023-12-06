@@ -3,6 +3,7 @@ bits 64
 extern MessageBeep
 extern MessageBoxA
 extern ExitProcess
+
 extern InitWindow
 extern BeginDrawing
 extern ClearBackground
@@ -14,8 +15,10 @@ extern EndDrawing
 extern IsKeyDown
 extern DrawLine
 
+
 start:
   sub rsp,8
+
   sub rsp, 32
   mov rcx, 30
   call [MessageBeep]
@@ -27,9 +30,11 @@ start:
   mov r8, gameTitle  
   call [InitWindow]
 
+
   mov rcx, 60
   call [SetTargetFPS]
   add rsp, 32
+
 
 gameloop:
   sub rsp, 32
@@ -37,12 +42,10 @@ gameloop:
   cmp rax, 0
   jnz end
 
-  ; inc dword [textx]
-  ; inc dword [texty]
-
   call [BeginDrawing]
   mov rcx, 0xFFFFF110
   call [ClearBackground]
+
 
   ;Draw Text
   mov rcx, boxTitle
@@ -62,10 +65,10 @@ gameloop:
 
   mov rcx, instructionTitle
   mov rdx, [textx]
-  mov r8,  300
-  mov r9, 30
+  mov r8,  390
+  mov r9, 20
 
-  mov rax, 0xFFFF0011
+  mov rax, 0xFFFF00DD
   sub rsp, 8
   push rax
 
@@ -77,7 +80,7 @@ gameloop:
 
   ; DRAW STATS
   mov rcx, stats
-  mov rdx, 100
+  mov rdx, 50
   mov r8, 50
   mov r9, 20
 
@@ -93,6 +96,7 @@ gameloop:
 
   ; INPUT 
   ; IsKeyDown(int key)
+
   xor rax, rax ; zeroing rax
   mov rcx, 68 ; Right
   sub rsp, 32
@@ -128,7 +132,7 @@ gameloop:
   add [squarey], rax 
   add [squarey], rax 
   add [squarey], rax 
-
+  
   ;shooting
   xor rax, rax ; zeroing rax
   mov rcx, 32 ; Space
@@ -140,6 +144,7 @@ gameloop:
   add rsp, 32
   
 aftershoot:
+
   ;aftershoot
 
   mov rcx, [enemyx]
@@ -153,7 +158,7 @@ aftershoot:
   call [DrawRectangle]
   add rsp, 32
   inc dword [enemyy]
- 
+
 no_input:
   ;void DrawRectangle(int posX, int posY, int width, int height, Color color);  
   ;Player
@@ -237,6 +242,7 @@ no_input:
   cmp dword [enemy4y], 768
   jge reset_enemy4
 
+
   add rsp, 8
   pop rax
   call [EndDrawing]
@@ -281,11 +287,13 @@ reset_playery:
   mov dword [squarey], 0
   jmp no_input
 
+
 ;END PROGRAM
   end:
   sub rsp, 32
   call [ExitProcess]
   add rsp, 32
+
   ret
 
 section .data
@@ -293,7 +301,7 @@ section .data
 boxTitle:
   db "ASSEMBLY RAYLIB GAME", 0
 instructionTitle:
-  db "PRESS WASD", 0
+  db "WASD - MOVE | SPACE - SHOOT(sound)", 0
 gameTitle:
   db "SQUARED", 0
 stats:
