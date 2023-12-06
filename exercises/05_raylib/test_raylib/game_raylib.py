@@ -27,7 +27,7 @@ exe.import_symbols("raylib.dll",
                        "IsKeyDown",
                        "EndDrawing",
                        "CloseWindow",
-                        "DrawEllipse" ])
+                        "DrawLine" ])
 
 with open(sys.argv[2], 'wb') as handle:
     handle.write(exe.link())
