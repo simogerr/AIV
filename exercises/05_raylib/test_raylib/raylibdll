@@ -1,0 +1,39 @@
+     1                                  [bits 64]
+     2                                  
+     3                                  extern MessageBeep
+     4                                  extern MessageBox
+     5                                  extern ExitProcess
+     6                                  
+     7                                  start:
+     8                                    
+     9 00000000 4883EC08                  sub rsp, 8
+    10                                  
+    11 00000004 4883EC20                  sub rsp, 32
+    12 00000008 B90A000000                mov rcx, 10
+    13 0000000D E8(00000000)              call MessageBeep
+    14 00000012 4883C420                  add rsp, 32
+    15                                  
+    16                                  
+    17 00000016 4883EC20                  sub rsp, 32
+    18 0000001A B900000000                mov rcx, 0 ; NULL
+    19 0000001F 48BA-                     mov rdx, boxmessage
+    19 00000021 [0000000000000000] 
+    20 00000029 49B8-                     mov r8, boxtitle
+    20 0000002B [0C00000000000000] 
+    21 00000033 41B900000000              mov r9, 0 ; pulsante ok
+    22 00000039 E8(00000000)              call MessageBox
+    23 0000003E 4883C420                  add rsp, 32
+    24                                  
+    25 00000042 4883EC20                  sub rsp, 32
+    26 00000046 B901000000                mov rcx, 1
+    27 0000004B E8(00000000)              call ExitProcess
+    28 00000050 4883C420                  add rsp, 32
+    29                                  
+    30                                  
+    31                                  section .data
+    32                                  boxmessage:
+    33 00000000 48656C6C6F20576F72-     db "Hello World", 0
+    33 00000009 6C6400             
+    34                                  boxtitle:
+    35 0000000C 5469746C6500            db "Title", 0
+    36                                   
