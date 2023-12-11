@@ -1,4 +1,4 @@
-[COAS E' IL KERNEL?]
+[COSA E' IL KERNEL?]
 Il "kernel" è una parte fondamentale di un sistema operativo (SO) ed è responsabile della gestione delle risorse del sistema e delle interazioni di base con l'hardware. In termini semplici, il kernel funge da intermediario tra il software e l'hardware, garantendo che i programmi possano accedere alle risorse del sistema in modo sicuro ed efficiente.
 
 Dal punto di vista fisico, il kernel è un programma software che risiede direttamente nella memoria del computer. Può essere caricato in memoria quando il sistema operativo viene avviato e rimane in esecuzione durante tutto il tempo di utilizzo del computer. Il kernel opera a livello di privilegio più elevato rispetto alle applicazioni utente, il che gli consente di accedere direttamente all'hardware e alle risorse di sistema.
